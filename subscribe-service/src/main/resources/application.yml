@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: subscribe-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/subscribe?useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=UTF-8&serverTimeZone=Asia/Seoul
+    username: 0chord
+    password: 1q2w3e4r!
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
