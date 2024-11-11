@@ -20,6 +20,11 @@ facility-service/.gradle
 facility-service/src/main/resources
 notification-service/gradle
 notification-service/src/main/resources
+user-service/gradle
+user-service/.gradle
+user-service/src/main/resources/
+user-service/build/
+user-service/.idea
 
 # Mac OS
 .DS_Store
@@ -28,12 +33,6 @@ notification-service/src/main/resources
 # Gradle
 .gradle/
 gradle/
-
-# Remove individual files from ignore
-!build.gradle
-!gradlew
-!gradlew.bat
-!settings.gradle
 
 # Docs
 HELP.md.DS.Store
