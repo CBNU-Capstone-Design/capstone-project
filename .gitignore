@@ -1,3 +1,4 @@
+
 # Properties and YAML files
 *.properties
 *.yaml
@@ -13,12 +14,16 @@ src/main/resources/
 **/resources/
 
 # Gradle and Service Resources
+
+
+
 subscribe-service/gradle
 subscribe-service/src/main/resources/
 facility-service/gradle
 facility-service/.gradle
 facility-service/src/main/resources
 notification-service/gradle
+
 notification-service/src/main/resources
 user-service/gradle
 user-service/.gradle
@@ -39,3 +44,4 @@ HELP.md.DS.Store
 
 /src/
 .DS_Store
+
