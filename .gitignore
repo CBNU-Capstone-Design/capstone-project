@@ -1,0 +1,33 @@
+# Properties and YAML files
+*.properties
+*.yaml
+
+# IDE and Build
+.idea/
+.github/
+build/
+
+# Resources
+src/main/resources/
+**/resources/
+
+# Gradle and Service Resources
+subscribe-service/gradle
+subscribe-service/src/main/resources/
+facility-service/gradle
+facility-service/.gradle
+facility-service/src/main/resources
+notification-service/gradle
+notification-service/src/main/resources
+
+# Mac OS
+.DS_Store
+**/.DS_Store
+
+# Gradle
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+build.gradle
+settings.gradle
