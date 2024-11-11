@@ -28,10 +28,12 @@ notification-service/src/main/resources
 # Gradle
 .gradle/
 gradle/
-gradlew
-gradlew.bat
-build.gradle
-settings.gradle
+
+# Remove individual files from ignore
+!build.gradle
+!gradlew
+!gradlew.bat
+!settings.gradle
 
 # Docs
 HELP.md
