@@ -36,3 +36,6 @@ gradle/
 
 # Docs
 HELP.md.DS.Store
+
+/src/
+.DS_Store
