@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # BycleDay 🚴
 ![bike-day](https://github.com/user-attachments/assets/bcbe1bf9-0f5d-42b3-b1d7-e620c38801b6)
 
