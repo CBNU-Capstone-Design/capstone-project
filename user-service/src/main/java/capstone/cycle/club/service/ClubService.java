@@ -413,7 +413,7 @@ public class ClubService {
     }
 
     private void validateCity(String city) {
-        if (!"전국".equals(city) && !city.endsWith("시")) {
+        if (!"전국".equals(city) && !(city.endsWith("시") || city.endsWith("군"))) {
             throw new ClubException(ClubErrorResult.INVALID_CITY_FORMAT);
         }
     }

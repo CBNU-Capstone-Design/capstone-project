@@ -15,7 +15,7 @@ public enum ClubErrorResult {
     ALREADY_REQUESTED(HttpStatus.BAD_REQUEST, "이미 가입 신청한 상태입니다."),
     REQUEST_NOT_FOUND(HttpStatus.NOT_FOUND, "존재하지 않는 가입 신청입니다."),
     INVALID_REQUEST_STATUS(HttpStatus.BAD_REQUEST, "유효하지 않은 가입 신청 상태입니다."),
-    INVALID_CITY_FORMAT(HttpStatus.BAD_REQUEST, "올바른 시 형식이 아닙니다. (예: 청주시, 서울시)"),
+    INVALID_CITY_FORMAT(HttpStatus.BAD_REQUEST, "올바른 시/군 형식이 아닙니다. (예: 청주시, 진천군)"),
     MAX_CLUB_COUNT_EXCEEDED(HttpStatus.BAD_REQUEST, "최대 가입 가능한 동호회 수를 초과했습니다. (최대 3개)"),
     NOT_CLUB_MEMBER(HttpStatus.FORBIDDEN, "동호회 회원이 아닙니다."),
     ALREADY_MANAGER(HttpStatus.BAD_REQUEST, "이미 운영진인 회원입니다."),

@@ -56,7 +56,8 @@ public class ClubController {
             @RequestPart(value = "newClubImage", required = false) MultipartFile newClubImage,
             @AuthenticationPrincipal UserDetailsImpl userDetails
     ) {
-        ClubDetailResponseDTO updatedClub = clubService.updateClub(clubId, request, newClubImage, userDetails.getUser().getId());
+        ClubDetailResponseDTO updatedClub =
+                clubService.updateClub(clubId, request, newClubImage, userDetails.getUser().getId());
         return ResponseEntity.ok(updatedClub);
     }
 
