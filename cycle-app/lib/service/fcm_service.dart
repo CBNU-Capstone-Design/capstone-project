@@ -9,18 +9,14 @@ class FCMService {
 
   Future<void> initialize(String userId) async {
     _userId = userId;
-    // Request permission for iOS devices
     await _firebaseMessaging.requestPermission();
 
-    // Get the token each time the application loads
     String? token = await _firebaseMessaging.getToken();
 
-    // Save the token to your server
     if (token != null) {
       await _sendTokenToServer(token);
     }
 
-    // Any time the token refreshes, store this in your server.
     _firebaseMessaging.onTokenRefresh.listen(_sendTokenToServer);
   }
 

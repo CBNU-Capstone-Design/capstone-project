@@ -66,15 +66,12 @@ class RideStatsService {
       return RideHistory.fromJson(jsonDecode(rideJson));
     }).toList();
 
-    // 최신순 정렬
     histories.sort((a, b) => b.date.compareTo(a.date));
 
-    // 총 주행시간 계산 개선
     int totalSeconds = 0;
     for (final history in histories) {
       if (history.duration > 0) {
-        // 유효한 시간만 계산
-        totalSeconds += history.duration; // duration이 이미 초 단위로 저장되어 있음
+        totalSeconds += history.duration;
       }
     }
 
@@ -84,35 +81,31 @@ class RideStatsService {
 
     for (final history in histories) {
       if (history.distance > 0) {
-        // 유효한 거리만 계산
         totalDistance += history.distance;
       }
       if (history.avgSpeed > 0) {
-        // 유효한 속도만 계산
         totalSpeedSum += history.avgSpeed;
         validSpeedCount++;
       }
     }
 
-    // 평균 속도 계산
     double averageSpeed =
         validSpeedCount > 0 ? totalSpeedSum / validSpeedCount : 0.0;
 
-    // 칼로리 계산 개선
     double calculateCalories(double distance, double avgSpeed, int seconds) {
-      double hours = seconds / 3600.0; // 초를 시간으로 변환
+      double hours = seconds / 3600.0; 
       double met;
       if (avgSpeed < 16) {
-        met = 8.0; // 저강도
+        met = 8.0; 
       } else if (avgSpeed < 19) {
-        met = 10.0; // 중강도
+        met = 10.0;
       } else if (avgSpeed < 22) {
-        met = 12.0; // 고강도
+        met = 12.0;
       } else {
-        met = 16.0; // 매우 높은 강도
+        met = 16.0;
       }
 
-      return (met * 65 * hours).roundToDouble(); // 65kg 기준
+      return (met * 65 * hours).roundToDouble();
     }
 
     return RideStats(

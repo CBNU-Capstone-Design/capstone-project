@@ -11,7 +11,7 @@ class FacilityService {
       final response = await http.get(
         Uri.parse('$baseUrl/api/facility/search'),
         headers: {
-          'Content-Type': 'application/json; charset=UTF-8',  // UTF-8 명시
+          'Content-Type': 'application/json; charset=UTF-8', 
         },
       );
 

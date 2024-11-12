@@ -43,9 +43,8 @@ class _PostDetailPageState extends State<PostDetailPage>
     super.dispose();
   }
 
-  // 현재 사용자 ID 가져오기 (임시)
   int getCurrentUserId() {
-    return 1; // TODO: 실제 사용자 ID 구현
+    return 1;
   }
 
   Future<void> _loadPostDetail() async {
@@ -241,7 +240,6 @@ class _PostDetailPageState extends State<PostDetailPage>
           _replyingTo = null;
         });
 
-        // 댓글 작성 후 목록 새로고침
         await _loadPostDetail();
 
         ScaffoldMessenger.of(context).showSnackBar(

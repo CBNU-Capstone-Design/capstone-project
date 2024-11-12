@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.light,
         ),
 
-        // Typography
         textTheme: GoogleFonts.notoSansTextTheme().copyWith(
           displayLarge: TextStyle(
             fontSize: 32,
@@ -73,7 +72,6 @@ class MyApp extends StatelessWidget {
           ),
         ),
 
-        // AppBar Theme
         appBarTheme: AppBarTheme(
           elevation: 0,
           backgroundColor: Colors.white,
@@ -91,7 +89,6 @@ class MyApp extends StatelessWidget {
           toolbarHeight: 56,
         ),
 
-        // Card Theme
         cardTheme: CardTheme(
           elevation: 2,
           shadowColor: Colors.black.withOpacity(0.1),
@@ -101,7 +98,6 @@ class MyApp extends StatelessWidget {
           clipBehavior: Clip.antiAlias,
         ),
 
-        // Button Theme
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             elevation: 0,
@@ -120,7 +116,6 @@ class MyApp extends StatelessWidget {
           ),
         ),
 
-        // Input Decoration Theme
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: Colors.grey[50],
@@ -147,16 +142,13 @@ class MyApp extends StatelessWidget {
           ),
         ),
 
-        // Icon Theme
         iconTheme: IconThemeData(
           color: Color(0xFF1A1A1A),
           size: 24,
         ),
 
-        // Scaffold Background Color
         scaffoldBackgroundColor: Color(0xFFFAFAFA),
 
-        // Dialog Theme
         dialogTheme: DialogTheme(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
@@ -170,7 +162,6 @@ class MyApp extends StatelessWidget {
           ),
         ),
 
-        // Bottom Navigation Bar Theme
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.white,
           selectedItemColor: Color(0xFF1E88E5),

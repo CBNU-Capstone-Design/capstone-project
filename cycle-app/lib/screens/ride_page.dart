@@ -613,14 +613,12 @@ class _RidePageState extends State<RidePage>
                   zoomControlsEnabled: false,
                   mapToolbarEnabled: false,
                 ),
-                // 상태 표시 패널
                 Positioned(
                   left: 0,
                   right: 0,
                   bottom: 0,
                   child: Column(
                     children: [
-                      // 통계 패널
                       Container(
                         margin: EdgeInsets.fromLTRB(16, 0, 16, 16),
                         padding: EdgeInsets.all(16),
@@ -674,7 +672,6 @@ class _RidePageState extends State<RidePage>
                           ],
                         ),
                       ),
-                      // 주행 시작/종료 버튼
                       Padding(
                         padding: EdgeInsets.fromLTRB(16, 0, 16, 32),
                         child: SizedBox(

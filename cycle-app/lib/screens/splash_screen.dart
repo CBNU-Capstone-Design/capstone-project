@@ -105,7 +105,6 @@ class _SplashScreenState extends State<SplashScreen>
           builder: (context, child) {
             return Stack(
               children: [
-                // Background patterns
                 Positioned(
                   top: -50,
                   right: -50,
@@ -133,7 +132,6 @@ class _SplashScreenState extends State<SplashScreen>
                     ),
                   ),
                 ),
-                // Main content
                 Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,

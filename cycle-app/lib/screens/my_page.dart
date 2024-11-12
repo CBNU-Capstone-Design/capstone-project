@@ -112,7 +112,6 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
     final TextEditingController pointController = TextEditingController();
     final formatCurrency = NumberFormat('#,###', 'ko_KR');
 
-    // 포인트 충전 추천 금액
     final recommendedAmounts = [10000, 30000, 50000, 100000];
 
     return showDialog(
@@ -585,7 +584,7 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
       final success = await _subscriptionService.updateSubscription(
         widget.userId,
         selectedType,
-        selectedMonths * 30, // 일수로 변환
+        selectedMonths * 30,
       );
 
       if (success) {
@@ -612,16 +611,13 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
   Widget _buildStatsCard() {
     if (_rideStats == null) return SizedBox.shrink();
 
-    // Duration 포맷팅 함수 수정
     String formatDuration(Duration duration) {
-      // 전체 시간을 초로 변환
+
       int totalSeconds = duration.inSeconds;
 
-      // 시, 분, 초 계산
       int hours = totalSeconds ~/ 3600;
       int minutes = (totalSeconds % 3600) ~/ 60;
 
-      // HH:mm 형식으로 반환
       return '${hours.toString().padLeft(2, '0')}:${minutes.toString().padLeft(2, '0')}';
     }
 

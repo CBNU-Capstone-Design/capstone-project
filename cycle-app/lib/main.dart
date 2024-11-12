@@ -90,7 +90,6 @@ class _MyAppState extends State<MyApp> {
           brightness: Brightness.light,
         ),
 
-        // Typography
         textTheme: GoogleFonts.notoSansTextTheme().copyWith(
           displayLarge: TextStyle(
             fontSize: 32,
@@ -173,7 +172,6 @@ class _MyAppState extends State<MyApp> {
           toolbarHeight: 56,
         ),
 
-        // Card Theme
         cardTheme: CardTheme(
           elevation: 2,
           shadowColor: Colors.black.withOpacity(0.1),
@@ -184,7 +182,6 @@ class _MyAppState extends State<MyApp> {
           margin: EdgeInsets.zero,
         ),
 
-        // Button Themes
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             elevation: 0,
@@ -218,7 +215,6 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
 
-        // Input Decoration Theme
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: Colors.grey[50],
@@ -257,10 +253,8 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
 
-        // Scaffold Theme
         scaffoldBackgroundColor: Color(0xFFFAFAFA),
 
-        // Dialog Theme
         dialogTheme: DialogTheme(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
@@ -277,7 +271,6 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
 
-        // BottomSheet Theme
         bottomSheetTheme: BottomSheetThemeData(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
@@ -287,14 +280,12 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.white,
         ),
 
-        // Divider Theme
         dividerTheme: DividerThemeData(
           space: 1,
           thickness: 1,
           color: Colors.grey[200],
         ),
 
-        // Floating Action Button Theme
         floatingActionButtonTheme: FloatingActionButtonThemeData(
           backgroundColor: Color(0xFF1E88E5),
           foregroundColor: Colors.white,

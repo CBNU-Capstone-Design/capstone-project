@@ -63,7 +63,6 @@ class PointService {
     }
   }
 
-  // 포인트 충전 메서드 추가
   Future<bool> rechargePoint(String userId, int point) async {
     try {
       final response = await http.put(

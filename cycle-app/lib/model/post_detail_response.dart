@@ -23,8 +23,8 @@ class PostDetail {
   final String content;
   final Author author;
   final List<PostImage> imageUrls;
-  final String createdAt;  // DateTime에서 String으로 변경
-  final String updatedAt;  // DateTime에서 String으로 변경
+  final String createdAt; 
+  final String updatedAt;
   final int viewCount;
   final int likeCount;
   final int commentCount;
@@ -55,8 +55,8 @@ class PostDetail {
       imageUrls: (json['imageUrls'] as List)
           .map((image) => PostImage.fromJson(image))
           .toList(),
-      createdAt: json['createdAt'],  // 직접 String으로 받기
-      updatedAt: json['updatedAt'],  // 직접 String으로 받기
+      createdAt: json['createdAt'],
+      updatedAt: json['updatedAt'],
       viewCount: json['viewCount'],
       likeCount: json['likeCount'],
       commentCount: json['commentCount'],
@@ -109,7 +109,7 @@ class Comment {
   final String content;
   final Author author;
   final int? parentId;
-  final List<Comment> replies;  // String에서 Comment로 변경
+  final List<Comment> replies;
   final int likeCount;
   final bool likedByCurrentUser;
   final String createdAt;
@@ -135,7 +135,7 @@ class Comment {
       parentId: json['parentId'],
       replies: (json['replies'] as List?)
           ?.map((reply) => Comment.fromJson(reply))
-          .toList() ?? [],  // replies를 Comment 객체로 변환
+          .toList() ?? [],
       likeCount: json['likeCount'],
       likedByCurrentUser: json['likedByCurrentUser'],
       createdAt: json['createdAt'],

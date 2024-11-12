@@ -50,7 +50,7 @@ class AuthorizationService {
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'userId': int.parse(userId),
-          'type': pageRequiredType,  // 페이지에 필요한 등급을 전송
+          'type': pageRequiredType,
         }),
       );
 

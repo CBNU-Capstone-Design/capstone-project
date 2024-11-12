@@ -24,7 +24,6 @@ class PostService {
 
   Future<PostDetailResponse?> getPostDetail(int postId) async {
     try {
-      print('Fetching post detail for postId: $postId'); // 요청 시작 로그
 
       final accessToken = await _getAccessToken();
       if (accessToken == null) {
@@ -33,10 +32,9 @@ class PostService {
       }
 
       print(
-          'Using access token: ${accessToken.substring(0, 10)}...'); // 토큰 확인 로그
+          'Using access token: ${accessToken.substring(0, 10)}...');
 
       final url = '$baseUrl/$postId/detail';
-      print('Request URL: $url'); // URL 확인 로그
 
       final response = await http.get(
         Uri.parse(url),
@@ -47,12 +45,12 @@ class PostService {
         },
       );
 
-      print('Response status code: ${response.statusCode}'); // 응답 상태 코드
-      print('Response headers: ${response.headers}'); // 응답 헤더
+      print('Response status code: ${response.statusCode}');
+      print('Response headers: ${response.headers}');
 
       if (response.statusCode == 200) {
         final decodedBody = utf8.decode(response.bodyBytes);
-        print('Response body: $decodedBody'); // 응답 데이터
+        print('Response body: $decodedBody');
 
         final Map<String, dynamic> data = json.decode(decodedBody);
         return PostDetailResponse.fromJson(data);
@@ -175,7 +173,6 @@ class PostService {
     }
   }
 
-  // 카테고리별 게시글 조회 메서드
   Future<Map<String, dynamic>> getPostsByCategory(
     PostCategory category, {
     int? lastPostId,
@@ -200,11 +197,9 @@ class PostService {
       );
 
       if (response.statusCode == 200) {
-        // UTF-8로 디코딩
         final decodedBody = utf8.decode(response.bodyBytes);
         final Map<String, dynamic> data = json.decode(decodedBody);
 
-        // 디버깅을 위한 출력
         print('Decoded response: $data');
 
         return data;
@@ -274,7 +269,6 @@ class PostService {
         'Accept': 'application/json',
       });
 
-      // postCreateDTO를 MultipartFile로 추가
       var postCreateDTO = json.encode({
         'title': title,
         'content': content,
@@ -289,7 +283,6 @@ class PostService {
         ),
       );
 
-      // 이미지 파일 추가
       if (imageFiles != null && imageFiles.isNotEmpty) {
         for (var i = 0; i < imageFiles.length; i++) {
           var file = imageFiles[i];

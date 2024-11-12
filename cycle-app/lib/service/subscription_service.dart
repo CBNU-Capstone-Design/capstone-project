@@ -50,7 +50,6 @@ class SubscriptionData {
 class SubscriptionService {
   static String get baseUrl => EnvConfig.subscriptionServiceUrl;
 
-  // 포인트 등록 API
   Future<bool> registerPoint(String userId) async {
     try {
       final response = await http.post(
@@ -72,7 +71,7 @@ class SubscriptionService {
     }
   }
 
-  // 구독 등록 API
+
   Future<bool> registerSubscription(String userId) async {
     try {
       final response = await http.post(

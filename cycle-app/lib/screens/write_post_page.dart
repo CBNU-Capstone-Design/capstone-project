@@ -18,10 +18,10 @@ class _WritePostPageState extends State<WritePostPage> {
   PostCategory _selectedCategory = PostCategory.FREE_BOARD;
   bool _isSubmitting = false;
 
-  // 작성 가능한 게시판 카테고리 정의
   final List<PostCategory> writableCategories = [
     PostCategory.FREE_BOARD,
     PostCategory.QUESTION_BOARD,
+    PostCategory.NOTICE
   ];
 
   Future<void> _pickImage() async {
@@ -199,7 +199,6 @@ class _WritePostPageState extends State<WritePostPage> {
                   ),
                   SizedBox(height: 16),
 
-                  // 내용 입력
                   TextField(
                     controller: _contentController,
                     decoration: InputDecoration(
@@ -221,7 +220,6 @@ class _WritePostPageState extends State<WritePostPage> {
               ),
             ),
 
-            // 이미지 추가 버튼
             Container(
               color: Colors.white,
               padding: EdgeInsets.all(16),
