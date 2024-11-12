@@ -53,10 +53,11 @@ public class ClubController {
     public ResponseEntity<ClubDetailResponseDTO> updateClub(
             @PathVariable Long clubId,
             @RequestPart("clubUpdateRequest") ClubUpdateRequest request,
-            @RequestPart("newClubImage") MultipartFile newClubImage,
+            @RequestPart(value = "newClubImage", required = false) MultipartFile newClubImage,
             @AuthenticationPrincipal UserDetailsImpl userDetails
     ) {
-        ClubDetailResponseDTO updatedClub = clubService.updateClub(clubId, request, newClubImage, userDetails.getUser().getId());
+        ClubDetailResponseDTO updatedClub =
+                clubService.updateClub(clubId, request, newClubImage, userDetails.getUser().getId());
         return ResponseEntity.ok(updatedClub);
     }
 

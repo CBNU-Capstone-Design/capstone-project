@@ -107,7 +107,7 @@ public class ClubService {
             }
             return fileService.uploadFile(null, newImage);
         }
-        return null;
+        return club.getClubImage();  // 새 이미지가 없으면 기존 이미지 유지
     }
 
     @Transactional
@@ -413,7 +413,7 @@ public class ClubService {
     }
 
     private void validateCity(String city) {
-        if (!"전국".equals(city) && !city.endsWith("시")) {
+        if (!"전국".equals(city) && !(city.endsWith("시") || city.endsWith("군"))) {
             throw new ClubException(ClubErrorResult.INVALID_CITY_FORMAT);
         }
     }
